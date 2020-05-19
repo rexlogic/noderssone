@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 let Parser = require('rss-parser')
 let parser = new Parser()
 
