@@ -2,14 +2,13 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 let Parser = require('rss-parser')
 let parser = new Parser()
 
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000))
 
-parser.parseURL(CORS_PROXY + 'https://www.reddit.com/.rss', function(err, feed) {
+parser.parseURL('https://www.reddit.com/.rss', function(err, feed) {
   if (err) throw err;
   console.log(feed.title);
   feed.items.forEach(function(entry) {
