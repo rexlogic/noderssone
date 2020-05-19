@@ -16,7 +16,7 @@ parser.parseURL('https://www.reddit.com/.rss', function(err, feed) {
 })
 
 app.get('/', function (req, res) {
-  res.send(feed.items[0].link)
+  res.send(linkone)
 })
 
 app.listen(app.get('port'), () => { 
