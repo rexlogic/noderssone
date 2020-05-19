@@ -1,0 +1,7 @@
+{
+  "name": "noderssone",
+  "description": "webhook",
+  "repository": "https://github.com/rexlogic/noderssone",
+  "keywords": ["rss", "webhook"],
+  "image": "heroku/nodejs"
+}
