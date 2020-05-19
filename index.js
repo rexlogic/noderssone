@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-const parser = require('rss-parser')
+let parser = new require('rss-parser')
 
 var linkone = ''
 
