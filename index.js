@@ -2,19 +2,21 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-let Parser = require('rss-parser')
-let parser = new Parser()
+const parser = require('rss-parser')
+
+var linkone = ''
 
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000))
 
 parser.parseURL('https://www.reddit.com/.rss', function(err, feed) {
   if (err) throw err;
-  console.log('L1=' + feed.items[0].link);
+  linkone = feed.items[0].link;
+  console.log(feed.items[0].link);
 })
 
 app.get('/', function (req, res) {
-  res.send('<!DOCTYPE html><html><head><title>Node RSS Link</title></head><body bgcolor="#ccddff"><div style="font-weight:bold; text-align:center;"></div></body></html>')
+  res.send(feed.items[0].link)
 })
 
 app.listen(app.get('port'), () => { 
