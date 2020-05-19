@@ -15,9 +15,6 @@ parser.parseURL('https://www.reddit.com/.rss', function(err, feed) {
   console.log(feed.title);
   linkone = feed.items[0].link;
   console.log('L1=' + linkone);
-  feed.items.forEach(function(entry) {
-    console.log(entry.title + ':' + entry.link);
-  })
 })
 
 app.get('/', function (req, res) {
