@@ -1,0 +1,30 @@
+{
+  "name": "noderssone",
+  "version": "1.0.0",
+  "description": "webhook",
+  "engines": {
+    "node": "8.1.4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "dateformat": "^3.0.3",
+    "mathjs": "^5.0.2",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexlogic/noderssone.git"
+  },
+  "keywords": [
+    "rss",
+    "webhook"
+  ],
+  "license": "MIT"
+}
